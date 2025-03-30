@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target":"es6",
+    "module":"CommonJS",
+    "strict": true,
+    "lib": ["ES2015","DOM"],
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "declaration": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": ["src"],
+  "exclude": [ "node_modules",
+  "dist",
+  "build-config",
+  ".storybook",
+  ".src/stories"]
+}
