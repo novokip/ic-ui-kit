@@ -35,4 +35,4 @@ export const NotActiveButton: Story = {
     active:false,
     children:'Текст'
   },
-};
+}; 
