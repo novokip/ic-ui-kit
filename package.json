@@ -1,10 +1,18 @@
 {
   "name": "ic-ui-kit",
-  "version": "1.0.0",
+  "private":false,
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
+  },
+  "exports":{
+"./package.json":"./package.json",
+".":{
+  "types":"./dist/index.d.ts",
+  "import":"./dist/index.js"
+}
   },
   "scripts": {
     "lint": "eslint .",

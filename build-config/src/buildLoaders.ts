@@ -2,6 +2,7 @@ import {BuildOptions} from './types/types';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {buildBabelLoader} from './babel/buildBaelLoader';
 import {ModuleOptions} from 'webpack';
+import path from "path";
 
 const ReactRefreshTypeScript = require('react-refresh-typescript');
 
@@ -27,7 +28,8 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
                 },
             },
         ],
-        exclude: /node_modules/,
+        exclude: [/node_modules/,
+            path.resolve(__dirname, 'src/stories'),],
     };
     const babelLoader = buildBabelLoader(options);
     const pngLoader = {

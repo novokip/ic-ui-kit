@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target":"es6",
-    "module":"CommonJS",
+    "module":"Node16",
     "strict": true,
     "lib": ["ES2015","DOM"],
     "outDir": "./dist/",
@@ -10,7 +10,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "allowJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "esModuleInterop": true
   },
   "include": ["src"],
@@ -18,5 +18,5 @@
   "dist",
   "build-config",
   ".storybook",
-  ".src/stories"]
+  "src/stories"]
 }
