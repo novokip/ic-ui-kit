@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
-import { DOMAttributes, MouseEvent } from 'react';
+import {HTMLAttributes, MouseEvent} from 'react';
 
-
-interface IButton extends DOMAttributes<HTMLButtonElement> {
+interface IButton extends HTMLAttributes<HTMLButtonElement> {
     /** Optional click handler */
-    onClick?: ( e: MouseEvent<HTMLButtonElement>) => void;
+    onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
     /** Active button */
     active?: boolean;
 }
@@ -42,12 +41,11 @@ const StyledButton = styled.button<{active: boolean}>`
 `;
 
 /** Button UI component for user interaction */
-export const Button = ({children, onClick, active=false, ...restProps}:IButton) => {
-    console.log(active)
+export const Button = ({children, onClick, active = false, ...restProps}: IButton) => {
+    console.log(active);
     return (
         <StyledButton {...restProps} onClick={onClick} active={active}>
             {children}
         </StyledButton>
     );
 };
-
